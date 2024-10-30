@@ -2,7 +2,7 @@ const Jsonfile = require('../config.json');
 const fs = require('fs');
 exports.run = async (client, message) => {
   if (message.author.id !== Jsonfile.owner)
-    return message.channel.send('Sorry but you cant use this command D:').then((msg) => {
+    return message.channel.send('Error, you cannot use this command').then((msg) => {
       setTimeout(() => msg.delete(), 7000);
     });
 
